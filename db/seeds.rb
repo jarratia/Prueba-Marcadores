@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+kinds = ['tipo1', 'tipo2', 'tipo3']
+10.times do
+    Kind.create(name: kinds.sample())
+end
