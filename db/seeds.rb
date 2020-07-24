@@ -5,7 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Category.destroy_all
+
+#Creando Kinds
 kinds = ['tipo1', 'tipo2', 'tipo3']
 10.times do
     Kind.create(name: kinds.sample())
+end
+
+#Creando categorías
+categories = ['categoria1', 'categoria2', 'categoria3']
+10.times do
+    Category.create(name: categories.sample(), visibility: true)
+end
+
+#Creando Bookmarks
+bookmarks = ['marcador 1', 'marcador 2', 'marcador 3']
+urls = ['google.com', 'facebook.com']
+10.times do
+    Bookmark.create(name: bookmarks.sample(), url: urls.sample())
 end
